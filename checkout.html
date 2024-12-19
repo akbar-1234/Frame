@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" class='com_snapp view-event itemid-139 j38 mm-hover'>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Ticketing | Dubai Frame</title>
+	<link href="templates/t3_bs3_blank/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="components/com_snapp/js/bootstrap-datetimepicker-build.css" rel="stylesheet" type="text/css">
+	<link href="templates/system/css/system.css" rel="stylesheet" type="text/css">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/template.css" rel="stylesheet" type="text/css">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/off-canvas.css" rel="stylesheet" type="text/css">
+	<link href="templates/t3_bs3_blank/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="media/mod_languages/css/template.css?521d8f912a2048011103861eb84c833e" rel="stylesheet" type="text/css">
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"63ff1a1bd7c7d0427a70c09d771a47d8","system.paths":{"root":"","base":""}}</script>
+	<script src="media/system/js/mootools-core.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/system/js/core.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/system/js/mootools-more.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery.min.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery-noconflict.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery-migrate.min.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="components/com_snapp/js/jqueryvalidation/jquery.validate.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/moment.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/toaster/toaster.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/functions.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/off-canvas.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(function($) {
+			 $('.hasTip').each(function() {
+				var title = $(this).attr('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					var mtelement = document.id(this);
+					mtelement.store('tip:title', parts[0]);
+					mtelement.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($('.hasTip').get(), {"maxTitleChars": 50,"fixed": false});
+		});
+
+			jQuery(function () {
+                            jQuery.ajax({
+                                url: "index.php?option=com_snapp&task=cart.getcartinfo&module=mod_snapp_cart&layout=default&format=raw&view=event",
+                                success: function (data) {
+                                    jQuery("#default_cart").html(data);
+                                    scrollingcart();
+                                },
+                                dataType: "html"
+                            });
+
+                        });
+                        var lastScrollTop = 0;
+                        function scrollingcart() {
+                        scrollingDiv = jQuery(".t3-sidebar > div");
+                          if (jQuery(window).width() > 768) {
+                        scrollingDiv.affix({
+                                offset: {
+                                  top: 750,
+                                  bottom: function () {
+                                    return (this.bottom = 200);
+                                  }
+                                }
+                              });
+                              scrollingDiv.on("affix.bs.affix", function() {
+                                scrollingDiv.width(scrollingDiv.width())
+                                });
+                                }
+                        /*jQuery(window).scroll(function (event) {
+                        
+                            if (jQuery(window).width() > 768) {
+                            
+                                if (jQuery(window).height() > jQuery(".t3-module").innerHeight()) {
+                                    maxheight = jQuery(".availability").outerHeight();
+                                    
+                                    windowBottom = maxheight + jQuery(".availability").offset().top;
+                                    moduleBottom = scrollingDiv.outerHeight() + scrollingDiv.offset().top;
+                                         var st = jQuery(window).scrollTop();
+                                           //alert(windowBottom+"-"+st);
+                                        if (st > lastScrollTop) {
+                                            if (jQuery(window).scrollTop() > 750) {
+                                                if (moduleBottom >= windowBottom) {
+                                                    //scrollingDiv.stop().animate({"marginTop": (windowBottom-scrollingDiv.innerHeight())}, "slow");
+                                                    scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                } else {
+                                                    scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() - 750)}, "slow");
+                                                }
+                                                
+                                            } 
+                                        } else {
+                                            if (jQuery(window).scrollTop() > 750) {
+                                                if (moduleBottom >= windowBottom) {
+                                                    scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                    if(jQuery(window).scrollTop()<scrollingDiv.offset().top) {
+                                                        scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() -750)}, "slow");
+                                                    } else {
+                                                        scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                    }
+                                                } else {
+                                                    
+                                                        scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() -750)}, "slow");
+                                                    
+                                                }
+                                            } else if (jQuery(window).scrollTop() == 0) {
+                                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                            } else if (jQuery(window).scrollTop() <= 750) {
+                                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                            } 
+                                        }
+                                        lastScrollTop = st;                                
+                                } else {
+                                    scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                }
+                            } else {
+                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                            }
+                             });
+                             */
+                             
+                             
+                        }
+			function update_cart() {
+				
+				jQuery.ajax({
+					  url: "index.php?option=com_snapp&task=cart.getcartinfo&module=mod_snapp_cart&layout=default&format=raw&view=event",
+					  success: function (data) {
+							jQuery("#default_cart").html(data);
+						},
+					dataType: "html"
+				});
+				
+			}
+		
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="YES">
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script type="text/javascript" src="/plugins/system/t3/base-bs3/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2405918026344574');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" src="tr?id=2405918026344574&ev=PageView
+&noscript=1">
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</head>
+
+<body>
+
+<div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+  <div class="logoHead">
+	<div class="dm-Logo">
+		<a href="./index.html" target="_blank">
+			<img src="templates/t3_bs3_blank/images/dubai_muncipality.png" alt="DM Logo">
+		</a>
+	</div>
+	<div class="dg-Logo">
+		<a href="./index.html" rel="nofollow" target="_blank">
+			<img src="templates/t3_bs3_blank/images/dubai_gov_logo.png" alt="DG Logo">
+		</a>
+	</div>
+</div>
+<!-- HEADER -->
+<header id="t3-header" class="t3-header">
+
+    <div class="">
+        <div class="">
+            <!-- LOGO -->
+            <div class="col-xs-10 col-sm-10 logo">
+                <div class="logo-image">
+                    <a href="index.html" title="The Frame">
+                            <img class="logo-img" src="images/logo_frame.png" alt="The Frame">
+                                                                        <span>The Frame</span>
+                    </a>
+                    <small class="site-slogan"></small>
+                </div>
+            </div>
+            <!-- //LOGO -->
+
+                <div class="col-xs-2 col-sm-2">
+                
+                                            <!-- LANGUAGE SWITCHER -->
+                        <div class="languageswitcherload">
+                            <div class="mod-languages">
+
+
+
+</div>
+
+                        </div>
+                        <!-- //LANGUAGE SWITCHER -->
+                    </div>
+                        </div>
+    </div>
+</header>
+<!-- //HEADER -->
+
+
+  
+<!-- MAIN NAVIGATION -->
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		
+			
+							
+<button class="btn btn-primary off-canvas-toggle " type="button" data-pos="left" data-nav="#t3-off-canvas" data-effect="off-canvas-effect-4">
+  <i class="fa fa-bars"></i>
+</button>
+
+<!-- OFF-CANVAS SIDEBAR -->
+<div id="t3-off-canvas" class="t3-off-canvas ">
+
+  <div class="t3-off-canvas-header">
+    <h2 class="t3-off-canvas-header-title">Sidebar</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+
+  <div class="t3-off-canvas-body">
+    
+  </div>
+
+</div>
+<!-- //OFF-CANVAS SIDEBAR -->
+
+			
+		</div>
+
+		
+		<div class="t3-navbar navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+			<li class="item-111">				<a href="index.php-2.html?option=com_snapp&amp;view=event&amp;id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&amp;CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&amp;Itemid=111&amp;lang=en">Home</a>
+				</li>		</ul>
+	
+		</div>
+
+	</div>
+</nav>
+<!-- //MAIN NAVIGATION -->
+
+
+  
+	<!-- SPOTLIGHT 1 -->
+	<div class="t3-sl t3-sl-1 clearfix">
+            <div class="container">
+			<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-spotlight-1  row">
+					<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="t3-module module " id="Mod97"><div class="module-inner"><div class="module-ct">
+
+<div class="custom">
+	<p>Book your Ticket</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+            </div>
+	</div>
+	<!-- //SPOTLIGHT 1 -->
+
+
+  
+<div class="container nopadding" style="margin-top:100px;">
+    <div class="breadCrumb-div">
+        <ol class="breadcrumb breadcrumb-arrow">
+            <li><a href="#">Tickets</a></li>
+            <li><a class="active" href="#">Checkout</a></li>
+            <li><a>Payment</a></li>
+            <li><a href="#">Confirmation</a></li>
+        </ol>
+    </div>
+</div>
+<div id="t3-mainbody" class="container t3-mainbody nopadding">
+    <div class="row">
+
+<!-- MAIN CONTENT -->
+<div id="t3-content" class="t3-content col-xs-12 col-sm-12  col-md-8">
+                    <div id="system-message-container">
+</div>
+
+                ﻿    <script type="text/javascript" src="/components/com_snapp/js/jqueryvalidation/jquery.validate.js"></script>
+<script type="text/javascript" src="/components/com_snapp/js/jqueryvalidation/localization/messages_en.js"></script>
+
+<script>
+jQuery(document).ready(function () {
+    jQuery('[data-toggle="tooltip"]').tooltip();
+});
+jQuery(document).ready(function () {
+    jQuery('[data-toggle="popover"]').popover();
+});
+</script>
+<section class="content-area" id="content-area">
+<div class="holder">
+<!--            <h2>Ticket Purchaser Details</h2>
+    <p>Please note: The confirmation email and print at home ticket(s) will be sent to the email ID of the Ticket Purchaser. </p>-->
+    
+    <form method="post" id="userform" class="form-horizontal" novalidate="novalidate">
+                                            <div class="account_form_cont">
+
+<div id="userdata_snapp" class="checkout_cont">
+        <div class="form-group">
+                                <!--<label for="form[][field][3C007431-1892-B3BF-78F1-01633FBA3551]" class="col-sm-12 control-label">First Name*</label>-->
+                            <div class="col-sm-12 required">
+                                        <input value="" type="text" class="form-control text " name="checkform[field][541B29CD-A77C-4B31-00AF-015F0092373D.1]" id="541B29CD-A77C-4B31-00AF-015F0092373D" placeholder="First Name" required="">
+                                               <br clear="all">
+        </div>
+    </div>
+                            <div class="form-group">
+                                <!--<label for="form[][field][34A84CD9-1998-6CE4-78F4-01633FBA3561]" class="col-sm-12 control-label">Last Name*</label>-->
+                            <div class="col-sm-12 required">
+                                        <input value="" type="text" class="form-control text " name="checkform[field][19C47EC2-2D6B-D447-00B1-015F0092374D.3]" id="19C47EC2-2D6B-D447-00B1-015F0092374D" placeholder="Last Name" required="">
+                                               <br clear="all">
+        </div>
+    </div>
+                            <div class="form-group">
+                                <!--<label for="form[][field][98D8622E-D7EA-3DEB-78F7-01633FBA3571]" class="col-sm-12 control-label">+9715XXXXXXXX</label>-->
+                            <div class="col-sm-12 ">
+                                        <input value="" type="text" class="form-control text " name="checkform[field][172F90A2-E6E1-38EA-00BD-015F0092377C.15]" id="172F90A2-E6E1-38EA-00BD-015F0092377C" placeholder="+9715XXXXXXXX">
+                                               <br clear="all">
+        </div>
+    </div>
+                            <div class="form-group">
+                                <!--<label for="form[][field][56A713B0-57FB-F02E-78FA-01633FBA3571]" class="col-sm-12 control-label">Email*</label>-->
+                            <div class="col-sm-12 required">
+                                        <input value="" type="email" class="form-control text email" name="checkform[field][A8C1AE56-FA8C-0F39-00C2-015F0092378B.21]" id="A8C1AE56-FA8C-0F39-00C2-015F0092378B" placeholder="Email" required="">
+                                               <br clear="all">
+        </div>
+    </div>
+                    <div class="form-group">
+            <!--<label for="confirmemail" class="col-sm-12 control-label">Confirm Email*</label>-->
+            <div class="col-sm-12 required">
+                <input value="" type="mail" class="form-control text confirmemail0" name="confirmemail" id="" placeholder="Confirm Email" required="">
+                <br clear="all">
+            </div>
+        </div>
+        <script>
+            jQuery.validator.addClassRules('confirmemail0', {
+                email: true,
+                equalTo: '#A8C1AE56-FA8C-0F39-00C2-015F0092378B' // <- any valid jQuery selector
+            });
+        </script>
+                       
+</div>
+<script type="text/javascript">
+jQuery(function () {
+jQuery('.datepicker').datetimepicker({
+    format: 'DD/MM/YYYY',
+    ignoreReadonly: true,
+    maxDate: moment('05/09/2024'),
+    viewMode: 'years',
+    widgetPositioning: {
+        vertical: "top"
+    },
+    allowInputToggle: true,
+});
+});
+</script>                    </div>
+                        <!--                <div id="review_snapp" class="checkout_cont">
+                            <h3>
+        Order Details                                    </h3>
+                                            <div class="panel panel-default">
+                                                <div class="panel-body table-responsive">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Quantity</th>
+                                            <th class="text-right" style="text-align:right">Total</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                                        <div class="cartitem  row-height valignmiddle">
+                                                            <div class="col-md-12">
+                                                                <div style="border-bottom:2px dashed #eee"  class="col-md-9 nopadding">
+            Adults                                                                                                                                                                                                                                                                                                                                                                                    <td class="span1"></td>
+                                                                </div>
+                                                                <div class="col-md-3 nopadding text-right" style="text-align: right;">
+                                                                    <span style="color: #B8ADA3; font-weight: bold; font-size: 16px;">AED 100.00</span>
+                                                                    <br/>
+                                                                    <span style="font-size: 12px">2 x AED 50.00</span>
+                                                                </div>
+                                                                <br clear="all" />
+                                                                <div  class="row-height valignmiddle row"  style="">
+                                                                                                <div class="col-md-8">
+                                                                                <table class="table table-striped" style="margin: 0;">
+                                                                                                                    <tr>
+                                                                                                <td colspan="2" style="border-top:none; padding-top:0;padding-bottom:0px;">
+                                                                                                    <span style="font-size:11px;">Dubai Frame (Limited Capacity)</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                                                                                <tr>
+                                                                                                <td colspan="2" style="border-top:none; padding-top:0;">
+                                                                                                    <span style="font-size:11px;">09/05/2024 08:00</span>
+                                                                                                                            </td>
+                                                                                            </tr>
+                                                                                                            </table>
+                                                                            </div>
+                                                                                            <div class="col-md-3">
+                                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                                            <div class="cartitem  row-height valignmiddle">
+                                                            <div class="col-md-12">
+                                                                <div style="border-bottom:2px dashed #eee"  class="col-md-9 nopadding">
+            Children                                                                                                                                                                                                                                                                                                                                                                                    <td class="span1"></td>
+                                                                </div>
+                                                                <div class="col-md-3 nopadding text-right" style="text-align: right;">
+                                                                    <span style="color: #B8ADA3; font-weight: bold; font-size: 16px;">AED 60.00</span>
+                                                                    <br/>
+                                                                    <span style="font-size: 12px">3 x AED 20.00</span>
+                                                                </div>
+                                                                <br clear="all" />
+                                                                <div  class="row-height valignmiddle row"  style="">
+                                                                                                <div class="col-md-8">
+                                                                                <table class="table table-striped" style="margin: 0;">
+                                                                                                                    <tr>
+                                                                                                <td colspan="2" style="border-top:none; padding-top:0;padding-bottom:0px;">
+                                                                                                    <span style="font-size:11px;">Dubai Frame (Limited Capacity)</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                                                                                <tr>
+                                                                                                <td colspan="2" style="border-top:none; padding-top:0;">
+                                                                                                    <span style="font-size:11px;">23/05/2024 08:00</span>
+                                                                                                                            </td>
+                                                                                            </tr>
+                                                                                                            </table>
+                                                                            </div>
+                                                                                            <div class="col-md-3">
+                                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-transform:uppercase">Total</td>
+                                            <td></td>
+                                            <td class="text-right"  style="text-align:right" >160.00 AED</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>-->
+        <!--                <div id="review_snapp" class="checkout_cont">
+                            <h3 class="checkout_h">
+                                            </h3>
+                                            <div class="panel panel-default">
+                                <div class="panel-body table-responsive">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th style="text-align:right">Quantity</th>
+                                            <th class="text-right" style="text-align:right">Unit Price</th>
+                                            <th class="text-right" style="text-align:right">Total</th>
+                                            <th></th>
+                                        </tr>
+                                                                                <tr>
+                                                                    <td class="span9">
+            Adults <br/>
+                                                                        <span style="font-size: 11px">
+            08:00:00 09/05/2024 - 21:00:00 09/05/2024                                                                                </span>
+                                                                    </td>
+                            
+                            
+                                                                    <td class="" style="text-align:right">2</td>
+                                                                    <td class=" text-right" style="text-align:right">50.00 AED</td>
+                                                                    <td class=" text-right" style="text-align:right">100.00 AED</td>
+                                                                    <td class="text-right">
+                                                                        <a href="/" class="delcart" rel="48559" title="delete" ><img src="/components/com_snapp/assets/images/close.png" /></a>
+                                                                    </td>
+                                                                </tr>
+                                                                                    <tr>
+                                                                    <td class="span9">
+            Children <br/>
+                                                                        <span style="font-size: 11px">
+            08:00:00 23/05/2024 - 21:00:00 23/05/2024                                                                                </span>
+                                                                    </td>
+                            
+                            
+                                                                    <td class="" style="text-align:right">3</td>
+                                                                    <td class=" text-right" style="text-align:right">20.00 AED</td>
+                                                                    <td class=" text-right" style="text-align:right">60.00 AED</td>
+                                                                    <td class="text-right">
+                                                                        <a href="/" class="delcart" rel="48560" title="delete" ><img src="/components/com_snapp/assets/images/close.png" /></a>
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                                <tr>
+                                                                    <td width="" style="text-transform:uppercase">Total</td>
+                                                                    <td style="text-align:right">10</td>
+                                                                    <td></td>
+                                                                    <td class="text-right" style="text-align:right">320.00 AED</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                    </table>
+                                </div>
+                            </div>
+                                            
+                            <br class="clearall" />
+                        </div>-->
+                                                    <!--                        <div id="paymentmethod_snapp" class="checkout_cont">
+                                            <h3 class="checkoutshipping checkout_h">-->
+                                        <!--                            </h3>
+                                            <div class="">
+                                                <div style="text-align:center;">-->
+                                            <!--                                        <input type="radio" id="1" name="checkform[payment_method]" value="1" checked="checked" id="1" />
+                                                            <label class="radio-inline" for="1"><span></span>Credit Card <img src="/components/com_snapp/assets/maestro-curved-32px.png" style="margin:0 5px;" /><img src="/components/com_snapp/assets/visa-electron-curved-32px.png" style="margin:0 5px;" /><img src="/components/com_snapp/assets/visa-curved-32px.png" style="margin:0 5px;" /><img src="/components/com_snapp/assets/amex.png" style="height:32px; margin:0 5px;" /></label>-->
+                                        <!--                                </div>
+                                            </div>
+                                        </div>-->
+                                <!--                    <div id="paymentmethod_snapp" class="checkout_cont">
+                                    <h3 class="checkoutshipping checkout_h">-->
+                                <!--                        </h3>
+                                    <div class="">
+                                        <div style="">
+                                            <div style="" class="text-center">-->
+                                    <!--                                        <input type="radio" id="pahome" name="checkform[shipping_method]" value="1" checked="checked" id="shipping_method_0" />
+                                                        <label class="radio-inline" for="pahome"><span></span>print@home</label>-->
+                                <!--                                    <input type="radio" name="checkform[shipping_method]" value="2" checked="checked" id="shipping_method_3" />
+                                                <label  class="radio-inline" for="shipping_method_3"><span></span>pickup@ticket office</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                        <br class="clearall">
+                            <div class="">
+                <!--                        <div class="">
+                                            <div style="margin: 20px 0; text-transform: uppercase" class="">
+                                                <input name="privacy" type="checkbox" value="" id="privacy" class="checkboxstyle" required="required" />
+                                                <label class="" for="privacy"><span></span>I have read and accept the <a data-toggle=modal data-target=#privacytext>privacy terms and conditions</a></label>
+                                            </div>
+                                        </div>-->
+
+                <div class="">
+                    <div style="margin-top: 20px; text-transform: uppercase" class="">
+                        <input name="terms" type="checkbox" value="" id="terms" class="checkboxstyle" required="required">
+                        <label class="" for="terms"><span></span>I have read and accept the <a data-toggle="modal" data-target="#termtext">sales terms and conditions</a></label>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center ">
+                    
+                    </div>
+                    </div>
+                    </form>
+                    <a href="./index.html"><button class="btn btn btn-primary btn-sm back pull-left" style="">Back</button></a>
+                    <a class="next_pages_1" href="./oplata.html"> <input name="" class="cart_button checkout_btn btn btn-primary btn-lg" id="invia" value="Continue to payment" type="submit"></a>
+    </div>
+</section>   
+<div class="modal  fade" id="termtext" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" style="" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Ticket Terms and Conditions</h4>
+    </div>
+    <div class="modal-body">
+                        T&amp;C
+<ol>
+<li>This ticket is valued for 1 person only</li>
+<li>Successful purchasers will receive a booking confirmation (Booking Confirmation) via email to the email address supplied.</li>
+<li>This Booking Confirmation can be redeemed for a Date and Time ticket from Zabeel Park Gate </li>
+<li>The Booking Confirmation is valid only for the specific date and time shown thereon and shall automatically expire upon the lapse of this specific date and time. Booking Confirmation(s) and / or Ticket(s) can only be used once and is not subject to refund or exchange of any kind whatsoever, whether before or after the Ticket(s) expiry. Lost, damaged and / or stolen Ticket(s) cannot be replaced, refunded or exchanged in any manner.</li>
+<li>Booking Confirmation / Ticket(s) holder(s) should arrive 15 minutes prior to the entry time shown on the Ticket(s).</li>
+<li>Children up to the age of 12 years must be accompanied by an adult at all times during the visit.</li>
+<li>No food, beverages, pets or smoking allowed.</li>
+<li>Entry timings and/or ticket prices may be changed, varies or amended without prior notice.</li>
+<li>Dubai Frame takes all reasonable steps to provide a safe and enjoyable experience. However, it shall not be liable for any person in respect of any loss of or damage to personal property or loss of life, personal injury to any person, whether that loss, damage or personal injury is caused by any personâ€™s negligence or otherwise.</li>
+<li>No large bags or strollers are permitted inside Dubai Frame. Large bags and strollers should be checked at the Will Call counter prior to entry.</li>
+<li>Dubai Frame is not responsible for inclement weather conditions affecting visibility</li>
+</ol>
+<hr style="margin: 20px -15px;">
+<div>Breakfast Ticket T&amp;C</div>
+<ol>
+<li>Breakfast Admission Fees (Adults 13+ ages) 100 AED (excluding vat)</li>
+<li>Breakfast Admission Fees (Child 3-12 years) 50 AED (excluding vat)</li>
+<li>This ticket is only offered on Friday &amp; Saturday according to the slots availability</li>
+<li>This ticket is only valued two hrs on the date of booking (6 AM- 8 AM)</li>
+<li>The bridge Journey duration is 45 mints</li>
+<li>Breakfast catering service cost is included in THE TICKET &amp; offered until 7:45 am ONLY</li>
+<li>Successful purchasers will receive a booking confirmation (Booking Confirmation) via email to the email address supplied.</li>
+<li>This Booking Confirmation can be redeemed for a Date and Time ticket from Zabeel Park Gate</li>
+<li>The Booking Confirmation is valid only for the specific date and time shown thereon and shall automatically expire upon the lapse of this specific date and time. Booking Confirmation(s) and / or Ticket(s) can only be used once and is not subject to refund or exchange of any kind whatsoever, whether before or after the Ticket(s) expiry. Lost, damaged and / or stolen Ticket(s) cannot be replaced, refunded or exchanged in any manner.</li>
+<li>Booking Confirmation / Ticket(s) holder(s) should arrive 15 minutes prior to the entry time shown on the Ticket(s).</li>
+<li>To follow the health &amp; safety instructions during your visit</li>
+<li>No food, beverages, pets or smoking allowed.</li>
+<li>Entry timings and/or ticket prices may be changed, varies or amended without prior notice.</li>
+<li>This ticket is valued for 1 person only</li>
+<li>Dubai Frame takes all reasonable steps to provide a safe and enjoyable experience. However, it shall not be liable for any person in respect of any loss of or damage to personal property or loss of life, personal injury to any person, whether that loss, damage or personal injury is caused by any person's negligence or otherwise.</li>
+<li>No large bags or strollers are permitted inside Dubai Frame. Large bags and strollers should be checked at the Will Call counter prior to entry.</li>
+<li>Dubai Frame is not responsible for inclement weather conditions affecting visibility</li>
+</ol>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+</div>
+<div class="modal  fade" id="privacytext" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog large" style="width:60%;" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Privacy</h4>
+    </div>
+    <div class="modal-body">
+        4            </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+</div>
+<style>
+.modal-dialog {
+width:60%;
+margin:30px auto;
+}
+@media screen and (max-width: 728px) {
+.modal-dialog {
+    width:85%;
+    margin:30px auto;
+}
+}
+</style>
+</div>
+<!-- //MAIN CONTENT -->
+
+<!-- SIDEBAR RIGHT -->
+<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-12  col-md-4 ">
+    <div class="t3-module module affix-top" id="Mod87" style="width: 370px; position: relative;"><div class="module-inner"><h3 class="module-title "><span>CART</span></h3><div class="module-ct">
+<div id="default_cart">
+
+<script>
+jQuery(document).ready(function () {
+jQuery('[data-toggle="tooltip"]').tooltip();
+});
+jQuery(document).ready(function () {
+jQuery('[data-toggle="popover"]').popover();
+});</script>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+            </div>
+<div class="panel-body">
+<!--            <table class="table table-striped">
+        <tr>
+                <th>Tickets</th>
+                <th>
+    Qty                    </th>
+                <th>Price</th>
+                    </tr>
+    </table>-->
+
+    <div class="cart-head">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+            <p>Tickets</p>
+        </div>
+<!--                <br clear="all" />
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <p>Qty</p>
+        </div>
+        <div class="col-md-6  col-sm-6 col-xs-6">
+            <p>Price</p>
+        </div>-->
+    </div>
+    <div class="for_cart">
+        
+    </div>
+           
+                
+
+        
+</div>
+<br clear="all">
+</div>
+
+<!--    : -->
+<div class="total text-right ng-binding" style="font-size:16px;">
+Subtotal: <span class="subTotal">20</span> AED    </div>
+<div class="total text-right ng-binding" style="font-size:16px;">
+Vat @ 5%: <span class="komissiya"></span> AED    </div>
+<div class="total text-right ng-binding">
+Total: <span class="totalPrice">21</span> AED    </div>
+<div id="mgscart" style="display:none; text-transform:uppercase; text-align:center; padding:30px;"></div>
+
+
+</div>
+
+
+
+
+</div></div></div>
+</div>
+<!-- //SIDEBAR RIGHT -->
+
+</div>
+</div> 
+
+
+
+
+  
+
+
+  
+
+
+  
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+
+<div class="custom">
+	<p style="text-align: center;"><img src="images/etisalat-logo.png" alt="etisalat logo" style="display: block; margin-left: auto; margin-right: auto;"></p></div>
+
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+
+<script src="./tickets.js"></script>
+
+</body>
+
+</html>

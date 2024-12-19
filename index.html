@@ -1,0 +1,1247 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" class='com_snapp view-event itemid-139 j38 mm-hover'>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Ticketing | Dubai Frame</title>
+	<link href="templates/t3_bs3_blank/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="components/com_snapp/js/bootstrap-datetimepicker-build.css" rel="stylesheet" type="text/css">
+	<link href="templates/system/css/system.css" rel="stylesheet" type="text/css">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/template.css" rel="stylesheet" type="text/css">
+	<link href="templates/t3_bs3_blank/local/css/themes/spd/off-canvas.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link href="templates/t3_bs3_blank/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="media/mod_languages/css/template.css?521d8f912a2048011103861eb84c833e" rel="stylesheet" type="text/css">
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"63ff1a1bd7c7d0427a70c09d771a47d8","system.paths":{"root":"","base":""}}</script>
+	<script src="media/system/js/mootools-core.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/system/js/core.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/system/js/mootools-more.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery.min.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery-noconflict.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="media/jui/js/jquery-migrate.min.js?521d8f912a2048011103861eb84c833e" type="text/javascript"></script>
+	<script src="components/com_snapp/js/jqueryvalidation/jquery.validate.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/moment.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/toaster/toaster.js" type="text/javascript"></script>
+	<script src="components/com_snapp/js/functions.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/off-canvas.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
+	<script src="plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
+  <style>
+    .title_h1{
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      padding: 0 20px;
+    }
+    .title_h2{
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      padding: 0 20px;
+    }
+    @media(max-width: 500px){
+      .title_h1{
+        font-size: 22px;
+      }
+      .title_h2{
+        font-size: 22px;
+      }
+    }
+  </style>
+	<script type="text/javascript">
+jQuery(function($) {
+			 $('.hasTip').each(function() {
+				var title = $(this).attr('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					var mtelement = document.id(this);
+					mtelement.store('tip:title', parts[0]);
+					mtelement.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($('.hasTip').get(), {"maxTitleChars": 50,"fixed": false});
+		});
+
+			jQuery(function () {
+                            jQuery.ajax({
+                                url: "index.php?option=com_snapp&task=cart.getcartinfo&module=mod_snapp_cart&layout=default&format=raw&view=event",
+                                success: function (data) {
+                                    jQuery("#default_cart").html(data);
+                                    scrollingcart();
+                                },
+                                dataType: "html"
+                            });
+
+                        });
+                        var lastScrollTop = 0;
+                        function scrollingcart() {
+                        scrollingDiv = jQuery(".t3-sidebar > div");
+                          if (jQuery(window).width() > 768) {
+                        scrollingDiv.affix({
+                                offset: {
+                                  top: 750,
+                                  bottom: function () {
+                                    return (this.bottom = 200);
+                                  }
+                                }
+                              });
+                              scrollingDiv.on("affix.bs.affix", function() {
+                                scrollingDiv.width(scrollingDiv.width())
+                                });
+                                }
+                        /*jQuery(window).scroll(function (event) {
+                        
+                            if (jQuery(window).width() > 768) {
+                            
+                                if (jQuery(window).height() > jQuery(".t3-module").innerHeight()) {
+                                    maxheight = jQuery(".availability").outerHeight();
+                                    
+                                    windowBottom = maxheight + jQuery(".availability").offset().top;
+                                    moduleBottom = scrollingDiv.outerHeight() + scrollingDiv.offset().top;
+                                         var st = jQuery(window).scrollTop();
+                                           //alert(windowBottom+"-"+st);
+                                        if (st > lastScrollTop) {
+                                            if (jQuery(window).scrollTop() > 750) {
+                                                if (moduleBottom >= windowBottom) {
+                                                    //scrollingDiv.stop().animate({"marginTop": (windowBottom-scrollingDiv.innerHeight())}, "slow");
+                                                    scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                } else {
+                                                    scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() - 750)}, "slow");
+                                                }
+                                                
+                                            } 
+                                        } else {
+                                            if (jQuery(window).scrollTop() > 750) {
+                                                if (moduleBottom >= windowBottom) {
+                                                    scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                    if(jQuery(window).scrollTop()<scrollingDiv.offset().top) {
+                                                        scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() -750)}, "slow");
+                                                    } else {
+                                                        scrollingDiv.stop().css( "marginTop", "(maxheight-scrollingDiv.outerHeight())" );
+                                                    }
+                                                } else {
+                                                    
+                                                        scrollingDiv.stop().animate({"marginTop": (jQuery(window).scrollTop() -750)}, "slow");
+                                                    
+                                                }
+                                            } else if (jQuery(window).scrollTop() == 0) {
+                                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                            } else if (jQuery(window).scrollTop() <= 750) {
+                                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                            } 
+                                        }
+                                        lastScrollTop = st;                                
+                                } else {
+                                    scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                                }
+                            } else {
+                                scrollingDiv.stop().animate({"marginTop": (0)}, "slow");
+                            }
+                             });
+                             */
+                             
+                             
+                        }
+			function update_cart() {
+				
+				jQuery.ajax({
+					  url: "index.php?option=com_snapp&task=cart.getcartinfo&module=mod_snapp_cart&layout=default&format=raw&view=event",
+					  success: function (data) {
+							jQuery("#default_cart").html(data);
+						},
+					dataType: "html"
+				});
+				
+			}
+		
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="YES">
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script type="text/javascript" src="/plugins/system/t3/base-bs3/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2405918026344574');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" src="tr?id=2405918026344574&ev=PageView
+&noscript=1">
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</head>
+
+<body>
+
+<div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+  <div class="logoHead">
+	<div class="dm-Logo">
+		<a href="./index.html" target="_blank">
+			<img src="templates/t3_bs3_blank/images/dubai_muncipality.png" alt="DM Logo">
+		</a>
+	</div>
+	<div class="dg-Logo">
+		<a href="./index.html" rel="nofollow" target="_blank">
+			<img src="templates/t3_bs3_blank/images/dubai_gov_logo.png" alt="DG Logo">
+		</a>
+	</div>
+</div>
+<!-- HEADER -->
+<header id="t3-header" class="t3-header">
+
+    <div class="">
+        <div class="">
+            <!-- LOGO -->
+            <div class="col-xs-10 col-sm-10 logo">
+                <div class="logo-image">
+                    <a href="index.html" title="The Frame">
+                            <img class="logo-img" src="images/logo_frame.png" alt="The Frame">
+                                                                        <span>The Frame</span>
+                    </a>
+                    <small class="site-slogan"></small>
+                </div>
+            </div>
+            <!-- //LOGO -->
+
+                <div class="col-xs-2 col-sm-2">
+                
+                                            <!-- LANGUAGE SWITCHER -->
+                        <div class="languageswitcherload">
+                            <div class="mod-languages">
+
+
+
+</div>
+
+                        </div>
+                        <!-- //LANGUAGE SWITCHER -->
+                    </div>
+                        </div>
+    </div>
+</header>
+<!-- //HEADER -->
+
+
+  
+<!-- MAIN NAVIGATION -->
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
+	<div class="container">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		
+			
+							
+<button class="btn btn-primary off-canvas-toggle " type="button" data-pos="left" data-nav="#t3-off-canvas" data-effect="off-canvas-effect-4">
+  <i class="fa fa-bars"></i>
+</button>
+
+<!-- OFF-CANVAS SIDEBAR -->
+<div id="t3-off-canvas" class="t3-off-canvas ">
+
+  <div class="t3-off-canvas-header">
+    <h2 class="t3-off-canvas-header-title">Sidebar</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+
+  <div class="t3-off-canvas-body">
+    
+  </div>
+
+</div>
+<!-- //OFF-CANVAS SIDEBAR -->
+
+			
+		</div>
+
+		
+		<div class="t3-navbar navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+			<li class="item-111">				<a href="index.php-2.html?option=com_snapp&amp;view=event&amp;id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&amp;CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&amp;Itemid=111&amp;lang=en">Home</a>
+				</li>		</ul>
+	
+		</div>
+
+	</div>
+</nav>
+<!-- //MAIN NAVIGATION -->
+
+<h1 class="title_h1">One-Day Offer! <span class="for_aksiyas"></span>% Off All Tickets! </h1>
+<h1 class="title_h2">Don't miss out! Today only, get <span class="for_aksiyas1"></span>% off on all tickets! Hurry, limited availability!</h1>
+  
+	<!-- SPOTLIGHT 1 -->
+	<div class="t3-sl t3-sl-1 clearfix">
+            <div class="container">
+			<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-spotlight-1  row">
+					<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="t3-module module " id="Mod97"><div class="module-inner"><div class="module-ct">
+
+<div class="custom">
+	<p>Book your Ticket</p></div>
+</div></div></div>
+							</div>
+			</div>
+<!-- SPOTLIGHT -->
+            </div>
+	</div>
+	<!-- //SPOTLIGHT 1 -->
+
+
+  
+<div class="container nopadding" style="margin-top:100px;">
+    <div class="breadCrumb-div">
+        <ol class="breadcrumb breadcrumb-arrow">
+            <li><a class="active" href="#">Tickets</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a>Payment</a></li>
+            <li><a href="#">Confirmation</a></li>
+        </ol>
+    </div>
+</div>
+<div id="t3-mainbody" class="container t3-mainbody nopadding">
+    <div class="row">
+
+<!-- MAIN CONTENT -->
+<div id="t3-content" class="t3-content col-xs-12 col-sm-12  col-md-8">
+                    <div id="system-message-container">
+</div>
+
+
+
+<!--    <div class="process">
+    <div class="btn-group btn-group-justified">
+        <div class="btn btn-sm btn-next active">Tickets</div>
+        <div class="btn btn-sm btn-next">Checkout</div>
+        <div class="btn btn-sm btn-next">Payment</div>
+        <div class="btn btn-sm btn-next last">Confirmation</div>
+    </div>
+</div>-->
+
+<!--    <div class="alert alert-success" role="alert" style="display:none;">-->
+
+
+<!--    <div class="eventinfo">
+    <div class="eventdetails">-->
+        <!--<div class="img_event" style="background: url('http://10.0.98.38//repository?id=');background-size: cover; background-position: center;">
+    <!--<a class="pull-right buyticket" id="buyticket"  href=javascript:void(0);"  ><img src="http://www.coopculture.it/images/buynow_ita.png" /></a>-->
+    <!--<img class="img-responsive" src="http://10.0.98.38//repository?id="  alt="" /><br />
+</div>-->
+<h2 class="eventTitle" style="margin-top:0;">Dubai Frame (Limited Capacity)</h2>
+<div class="">
+<div class="eventdescfloat">
+    <div class="eventdesc">
+        <div class="row-height-horiz" style="background:#F3F3F3;padding:10px">
+                                                                                            
+        </div>
+        <br clear="all">
+
+
+                                    </div>
+</div>
+
+<div class="availability clearfix">
+                            <!--            <form class="form-inline">
+                                <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                    <label class="col-md-4 col-sm-4 col-xs-4" for="date_req">Select a Date</label>
+                                    <div class="input-group col-md-8 col-sm-8 col-xs-8 date">
+                                        <input type="text" value="10/05/2024"  class="form-control" name="date_req" id="date_req" disabled="disabled">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                                    </div>
+                                </div>
+                
+                            </form>-->
+                        <script type="text/javascript">
+                   
+                    jQuery(document).on('click', '.day-number.active', function (event) {
+                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        var date = jQuery(this).attr('data-date');
+                        var dispoonly = 0;
+                        
+                        jQuery('.day-number').parent('td').removeClass('dayactive');
+                        jQuery(this).parent('td').addClass('dayactive');
+
+                        
+                        
+                    }); </script>
+                            <div style="text-align:center;">
+                    <div id="days">
+                    </div>
+                    <div class="Kalendar_big">
+                      <div class="Kalendar_div">
+                        
+                        <div id="aylantirish"></div>
+            
+            <!-- <div class="hello_href"></div> -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div> -->
+              </div>
+              <div  id="aylantirish1" class="swiper-button-next"></div>
+              <div  id="aylantirish2" class="swiper-button-prev"></div>
+            </div><div id="calendar"></div>
+                        <table style="display: none;"
+                          id="calendar-table"
+                          class="m-calendar"
+                          data-select_days="1"
+                          data-calendar_name="calendar"
+                        >
+                        <div style="display: none;" class="m-detailBalloon" data-calendar_name="calendar">
+                  
+                          <h4 class="c-calendar-balloon-date"></h4>
+                          <ul class="c-calendar-balloon-info">
+                              <li>Hours 9:00～21:00</li>
+                              <li class="pasport_price"></li>
+                          </ul>
+                      
+                      
+                  </div>
+                        
+                        
+                          <tbody
+                            class="c-calendar-tbody"
+                            data-pid="temporaryid"
+                            data-selected="[]"
+                            data-dates_earlynextmonth=""
+                            data-nextmonth_firstdaystatus=""
+                            onclick="clickCalendar()"
+                          >
+                            <tr>
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td></td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240201"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>1</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240202"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>2</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-saturday hello_uzb"
+                                data-date="20240203"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>3</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-NG is-nosale is-sunday hello_uzb"
+                                data-date="20240204"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>4</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240205"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>5</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240206"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>6</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240207"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>7</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240208"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>8</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240209"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>9</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-saturday hello_uzb"
+                                data-date="20240210"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>10</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-NG is-nosale is-holiday hello_uzb"
+                                data-date="20240211"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>11</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-holiday hello_uzb"
+                                data-date="20240212"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>12</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240213"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>13</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240214"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>14</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240215"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>15</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-NG is-nosale is-weekday hello_uzb"
+                                data-date="20240216"
+                                data-stock="is-nosale"
+                                data-price=""
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>16</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-saturday is-sale hello_uzb"
+                                data-date="20240217"
+                                data-stock="is-sale"
+                                data-price="9900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>17</span>
+          
+                                  <span class="txt-price g-hidden">9900</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-OK is-sunday is-sale is-active hello_uzb"
+                                data-date="20240218"
+                                data-stock="is-sale"
+                                data-price="9400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>18</span>
+          
+                                  <span class="txt-price g-hidden">9400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240219"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>19</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240220"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>20</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240221"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>21</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240222"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>22</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-holiday is-sale hello_uzb"
+                                data-date="20240223"
+                                data-stock="is-sale"
+                                data-price="10900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>23</span>
+          
+                                  <span class="txt-price g-hidden">10900</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-saturday is-sale hello_uzb"
+                                data-date="20240224"
+                                data-stock="is-sale"
+                                data-price="10900"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>24</span>
+          
+                                  <span class="txt-price g-hidden">10900</span>
+                                </a>
+                              </td>
+                            </tr>
+          
+                            <tr>
+                              <td
+                                class="is-OK is-sunday is-sale hello_uzb"
+                                data-date="20240225"
+                                data-stock="is-sale"
+                                data-price="9400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>25</span>
+          
+                                  <span class="txt-price g-hidden">9400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240226"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>26</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240227"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>27</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240228"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>28</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td
+                                class="is-OK is-weekday is-sale hello_uzb"
+                                data-date="20240229"
+                                data-stock="is-sale"
+                                data-price="8400"
+                                id="hello_uzb"
+                              >
+                                <a class="c-calendar-dates">
+                                  <span>29</span>
+          
+                                  <span class="txt-price g-hidden">8400</span>
+                                </a>
+                              </td>
+          
+                              <td></td>
+          
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                        <div class="eventperfomances">
+                <div id="performances">
+    <div id="">
+        <div class="col-md-12" style="text-align:center">
+                            
+                    <!--<div style="margin:0 2px" class="col-md-1 col-xs-1 btn btn-default page" data-page="1">1</div>-->
+
+                    </div>
+                    <h3 class="date_perf">
+                 
+                Thursday, 30 May 2024            </h3>
+            <div class="content">
+                <div class="perf_row_head clearfix">
+
+                        <div class="col-md-5 col-sd-5 col-xs-12"> 
+                            Time Slots                        </div>
+                        <div class="col-md-3 col-sd-3 col-xs-12"> 
+                           Remaining Tickets                        </div>
+                        <div class="col-md-4 col-sd-4 col-xs-12"> 
+                        </div>
+                    </div>
+                                    
+                    <div class="perf_row even row-height2  clearfix active">
+                        <!--                        <div class='col-md-6 col-sd-6 col-xs-12'> 
+                                                    <span style="font-size:20px;">10 May 2024<br />
+                        </span>
+                                                </div>-->
+                        <div class="col-md-5 col-sd-5 col-xs-12"> 
+                                                      
+                            08:00 AM 
+                            -
+                            9:00 PM  
+                        </div>
+                        <!--                        <div class='col-md-2 col-sd-2 col-xs-2'>
+                                                    <div class="btn btn-sm btn-success">
+                        Available                                                    </div>
+                                                    <img src="/components/com_snapp/assets/images/dispo.png" data-toggle="tooltip" data-placement="top" title="Available" /> 
+                                                </div>-->
+                        <div class="col-md-3 col-sd-3 col-xs-12 qtyavailable"> 
+                            6000                        </div>
+                        <div class="col-md-4 col-sd-4 col-xs-12"> 
+                                                        <button onclick="nextPage()" href="#" class="btn-productinpage btn btn-success btn-lg  showPerformance" data-performanceid="ED20BEA7-2C07-DBEC-3F06-018BC1E187E4">
+                                Available                            </button>                        </div>
+                    </div>
+                                </div>
+                </div>
+    <br clear="all">
+<div id="wait_cart" style="display:none; color:#fff; text-transform:uppercase; text-align:center;">
+    Wait..<br><br>
+    <img src="https://ticketingsales.dubaiframe.ae/components/com_snapp/assets/images/loading.gif">
+</div>
+<div id="msg" style="display:none; text-transform:uppercase; text-align:center; padding:30px;">
+
+</div>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+</div>
+                <div id="upsell"><style>
+    .popover {
+        max-width: 100%;
+        width: auto;
+    }
+</style>
+
+    <style>
+      .productcont {
+        display: none;
+      }  
+    </style>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery('[data-toggle="tooltip"]').tooltip();
+    });
+
+    jQuery(document).ready(function () {
+        jQuery('[data-toggle="popover"]').popover({
+            container: 'body'
+        });
+    });
+</script>
+</div>
+            </div>
+            <div class="productcont" id="productcont">    <div id="">
+        <div id="" class="">
+            
+                <div class="col-md-6 col-xs-12 clearfix" style="">
+                    <div class="productrow clearfix divaddcart">
+                        <div class="clearfix">
+                            <div class="prodimgcontainer text-center">
+                                <img src="./images/adults.jpg" class="img-responsive">
+                                <h3 class="prodtitle">Adults</h3>
+                                <form class="form-inline" style="text-align:center;">
+                                                                            <div class="form-group ">
+                                            <div class="input-group">
+                                                <span onclick="for_minus_0()" class="input-group-addon quantity" rel="-1" data-add="q7056A97C-7286-8A78-062C-016317C89EF3" style="float:left;">
+                                                    <a class="glyphicon glyphicon-minus img-circle"></a>
+                                                </span>
+                                                <!--<div class="input-group-addon glyphicon glyphicon-minus-sign quantity" rel="-1" data-add="q" style="color:#027ebe"></div>-->
+                                                <input type="text" id="input_0" class="quantitytoadd form-control text-center" value="0" readonly="readonly" id="q7056A97C-7286-8A78-062C-016317C89EF3" data-productid="7056A97C-7286-8A78-062C-016317C89EF3" size="3" numbers-only="" maxlength="3" style="float:left;">
+                                                <span onclick="for_plus_0()" class="input-group-addon quantity" rel="1" data-add="q7056A97C-7286-8A78-062C-016317C89EF3" style="float:right;">
+                                                    <a class="glyphicon glyphicon-plus img-circle"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                                                    </form>
+                            </div>
+                            <button onclick="add_cart(0)" type="button" class="btn btn-primary addtocart" data-performanceid="ED20BEA7-2C07-DBEC-3F06-018BC1E187E4" data-catalogid="06673D91-F3B5-9CC7-16F3-01631BBB1510" data-eventid="4ADBEE3C-ADA1-5451-0996-01631BB44D00">
+                                add to cart                            </button>
+                            <a role="button" class="info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Above 12 years">
+                                <img src="./images/I-tooltip.png">
+                            </a>
+                           
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h2  style="font-size: 18px; margin:0; color:#">Adults</h2>
+                                                            </div>-->
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h3 class="product-price" style="color:#">AED 50.00</h3>
+                                                                
+                                                            </div>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-xs-12 clearfix" style="">
+                    <div class="productrow clearfix divaddcart">
+                        <div class="clearfix">
+                            <div class="prodimgcontainer text-center">
+                                <img src="./images/childrens.jpg" class="img-responsive">
+                                <h3 class="prodtitle">Children</h3>
+                                <form class="form-inline" style="text-align:center;">
+                                                                            <div class="form-group ">
+                                            <div class="input-group">
+                                                <span onclick="for_minus_1()" class="input-group-addon quantity" rel="-1" data-add="q19432616-4CD4-87B6-08CD-016317D8C173" style="float:left;">
+                                                    <a class="glyphicon glyphicon-minus img-circle"></a>
+                                                </span>
+                                                <!--<div class="input-group-addon glyphicon glyphicon-minus-sign quantity" rel="-1" data-add="q" style="color:#027ebe"></div>-->
+                                                <input type="text" id="input_1"  class="quantitytoadd form-control text-center" value="0" readonly="readonly" id="q19432616-4CD4-87B6-08CD-016317D8C173" data-productid="19432616-4CD4-87B6-08CD-016317D8C173" size="3" numbers-only="" maxlength="3" style="float:left;">
+                                                <span onclick="for_plus_1()" class="input-group-addon quantity" rel="1" data-add="q19432616-4CD4-87B6-08CD-016317D8C173" style="float:right;">
+                                                    <a class="glyphicon glyphicon-plus img-circle"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                                                    </form>
+                            </div>
+                            <button onclick="add_cart(1)" type="button" class="btn btn-primary addtocart" data-performanceid="ED20BEA7-2C07-DBEC-3F06-018BC1E187E4" data-catalogid="06673D91-F3B5-9CC7-16F3-01631BBB1510" data-eventid="4ADBEE3C-ADA1-5451-0996-01631BB44D00">
+                                add to cart                            </button>
+                            <a role="button" class="info" data-toggle="tooltip" data-placement="top" title="" data-original-title="
+	From 3 – 12 years
+	Children below 3 years are free
+
+">
+                                <img src="./images/I-tooltip.png">
+                            </a>
+                           
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h2  style="font-size: 18px; margin:0; color:#">Children</h2>
+                                                            </div>-->
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h3 class="product-price" style="color:#">AED 20.00</h3>
+                                                                
+                                                            </div>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 col-xs-12 clearfix" style="">
+                    <div class="productrow clearfix divaddcart">
+                        <div class="clearfix">
+                            <div class="prodimgcontainer text-center">
+                                <img src="./images/POD.jpg" class="img-responsive">
+                                <h3 class="prodtitle">POD</h3>
+                                <form class="form-inline" style="text-align:center;">
+                                                                            <div class="form-group ">
+                                            <div class="input-group">
+                                                <span onclick="for_minus_2()" class="input-group-addon quantity" rel="-1" data-add="qE685212A-21CA-34E8-7A48-016317DF0003" style="float:left;">
+                                                    <a class="glyphicon glyphicon-minus img-circle"></a>
+                                                </span>
+                                                <!--<div class="input-group-addon glyphicon glyphicon-minus-sign quantity" rel="-1" data-add="q" style="color:#027ebe"></div>-->
+                                                <input type="text" id="input_2"  class="quantitytoadd form-control text-center" value="0" readonly="readonly" id="qE685212A-21CA-34E8-7A48-016317DF0003" data-productid="E685212A-21CA-34E8-7A48-016317DF0003" size="3" numbers-only="" maxlength="3" style="float:left;">
+                                                <span onclick="for_plus_2()" class="input-group-addon quantity" rel="1" data-add="qE685212A-21CA-34E8-7A48-016317DF0003" style="float:right;">
+                                                    <a class="glyphicon glyphicon-plus img-circle"></a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                                                    </form>
+                            </div>
+                            <button onclick="add_cart(2)" type="button" class="btn btn-primary addtocart" data-performanceid="ED20BEA7-2C07-DBEC-3F06-018BC1E187E4" data-catalogid="06673D91-F3B5-9CC7-16F3-01631BBB1510" data-eventid="4ADBEE3C-ADA1-5451-0996-01631BB44D00">
+                                add to cart                            </button>
+                            <a role="button" class="info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tickets for People of Determination and max of 2 companions are free of charge.
+You can collect your companion's tickets through our ticketing counter at Dubai Frame.
+Terms and Conditions Apply
+">
+                                <img src="./images/I-tooltip.png">
+                            </a>
+                           
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h2  style="font-size: 18px; margin:0; color:#">POD</h2>
+                                                            </div>-->
+                            <!--                                <div class="col-md-12 text-center">
+                                                                <h3 class="product-price" style="color:#">AED 0.00</h3>
+                                                                
+                                                            </div>-->
+                        </div>
+
+                    </div>
+                </div>
+
+                        </div>
+    </div>
+    <script>
+    jQuery('.info').tooltip();
+    </script>
+</div>
+        </div>
+</div>
+
+<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- //MAIN CONTENT -->
+
+<!-- SIDEBAR RIGHT -->
+<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-12  col-md-4 ">
+    <div class="t3-module module affix-top" id="Mod87" style="width: 370px; position: relative;"><div class="module-inner"><h3 class="module-title "><span>CART</span></h3><div class="module-ct">
+<div id="default_cart">
+
+<script>
+jQuery(document).ready(function () {
+jQuery('[data-toggle="tooltip"]').tooltip();
+});
+jQuery(document).ready(function () {
+jQuery('[data-toggle="popover"]').popover();
+});</script>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+            </div>
+<div class="panel-body">
+<!--            <table class="table table-striped">
+        <tr>
+                <th>Tickets</th>
+                <th>
+    Qty                    </th>
+                <th>Price</th>
+                                                                                                                                                                                                                    <th></th>
+                    </tr>
+    </table>-->
+
+    <div class="cart-head">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-left">
+            <p>Tickets</p>
+        </div>
+<!--                <br clear="all" />
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <p>Qty</p>
+        </div>
+        <div class="col-md-6  col-sm-6 col-xs-6">
+            <p>Price</p>
+        </div>-->
+    </div>
+    <div class="for_cart">
+        
+    </div>
+                            
+                
+
+        
+</div>
+<br clear="all">
+</div>
+    
+<!--    : -->
+<div class="total text-right ng-binding" style="font-size:16px;">
+Subtotal: <span class="subTotal">0</span> AED    </div>
+<div class="total text-right ng-binding" style="font-size:16px;">
+Vat @ 5%: <span class="komissiya"></span> AED    </div>
+<div class="total text-right ng-binding">
+Total: <span class="totalPrice">0</span> AED    </div>
+                <div class="span12" onclick="sessionStorage.setItem('dataprice',document.querySelector('.totalPrice').innerHTML)">
+        <a class="cart_button checkout_btn btn btn-primary" style="margin-left: 2%;margin-right: 2%;margin-bottom:8px;" href="./checkout.html">
+            Check Out                </a>
+    </div>
+    <div id="mgscart" style="display:none; text-transform:uppercase; text-align:center; padding:30px;"></div>
+
+
+</div>
+
+
+
+
+</div></div></div>
+</div>
+<!-- //SIDEBAR RIGHT -->
+
+</div>
+</div> 
+
+
+
+
+  
+
+
+  
+
+
+  
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+	
+	<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+
+<div class="custom">
+	<p style="text-align: center;"><img src="images/etisalat-logo.png" alt="etisalat logo" style="display: block; margin-left: auto; margin-right: auto;"></p></div>
+
+          <small>
+            <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a> is a front-end framework of Twitter, Inc. Code licensed under <a href="licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>.
+          </small>
+          <small>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> font licensed under <a href="http://scripts.sil.org/OFL">SIL OFL 1.1</a>.
+          </small>
+				</div>
+							</div>
+		</div>
+	</section>
+
+</footer>
+<!-- //FOOTER -->
+
+</div>
+
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+
+      var aksiya = 35
+
+      localStorage.setItem("for_aksiya",aksiya)
+      document.querySelector(".for_aksiyas").innerHTML=aksiya
+      document.querySelector(".for_aksiyas1").innerHTML=aksiya
+      
+  document.querySelector("#logo_img").src="https://ticketsales.taronga.org.au/media/dubbo.2856a10f.svg"
+    </script>
+
+</body>
+
+</html>

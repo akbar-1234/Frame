@@ -1,0 +1,273 @@
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/bootstrap-datetimepicker-build.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\bootstrap-datetimepicker-build.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/bootstrap-datetimepicker.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\bootstrap-datetimepicker.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/functions.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\functions.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/jqueryvalidation/jquery.validate.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\jqueryvalidation\jquery.validate.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/moment.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\moment.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/js/toaster/toaster.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\js\toaster\toaster.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/lib/datepicker/bootstrap-datepicker.min.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\lib\datepicker\bootstrap-datepicker.min.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/lib/datepicker/bootstrap-datepicker.min.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\lib\datepicker\bootstrap-datepicker.min.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/components/com_snapp/lib/datepicker/locales/bootstrap-datepicker.it.min.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\components\com_snapp\lib\datepicker\locales\bootstrap-datepicker.it.min.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/images/Dubai-Light.woff
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\Dubai-Light.woff
+Content Type: application/font-woff
+
+Uri: https://ticketingsales.dubaiframe.ae/images/Dubai-Medium.woff
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\Dubai-Medium.woff
+Content Type: application/font-woff
+
+Uri: https://ticketingsales.dubaiframe.ae/images/Dubai-Regular.woff
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\Dubai-Regular.woff
+Content Type: application/font-woff
+
+Uri: https://ticketingsales.dubaiframe.ae/images/etisalat-logo.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\etisalat-logo.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/images/logo_frame.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\logo_frame.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/images/Museo-500.otf
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\images\Museo-500.otf
+Content Type: application/x-font-otf
+
+Uri: https://ticketingsales.dubaiframe.ae/index.php?lang=en
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\index.php.html
+Content Type: text/html
+
+Uri: https://ticketingsales.dubaiframe.ae/index.php?option=com_snapp&view=event&id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&Itemid=111&lang=ar
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\index.php-4.html
+Content Type: text/html
+
+Uri: https://ticketingsales.dubaiframe.ae/index.php?option=com_snapp&view=event&id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&Itemid=111&lang=en
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\index.php-2.html
+Content Type: text/html
+
+Uri: https://ticketingsales.dubaiframe.ae/index.php?option=com_snapp&view=event&id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&Itemid=139&lang=en
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\index.php-3.html
+Content Type: text/html
+
+Uri: https://ticketingsales.dubaiframe.ae/index.php?option=com_snapp&view=event&id=4ADBEE3C-ADA1-5451-0996-01631BB44D00&CatalogId=06673D91-F3B5-9CC7-16F3-01631BBB1510&Itemid=458&lang=ar
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\index.php-1.html
+Content Type: text/html
+
+Uri: https://ticketingsales.dubaiframe.ae/media/jui/js/jquery-migrate.min.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\jui\js\jquery-migrate.min.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/media/jui/js/jquery-noconflict.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\jui\js\jquery-noconflict.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/media/jui/js/jquery.min.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\jui\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/media/mod_languages/css/template.css?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\mod_languages\css\template.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/css/system.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\css\system.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/images/notice-alert.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\images\notice-alert.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/images/notice-info.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\images\notice-info.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/images/notice-note.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\images\notice-note.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/js/core.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\js\core.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/js/mootools-core.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\js\mootools-core.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/media/system/js/mootools-more.js?521d8f912a2048011103861eb84c833e
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\media\system\js\mootools-more.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.eot
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.eot?
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.svg
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular.svg
+Content Type: image/svg+xml
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.ttf
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.woff
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular.woff
+Content Type: application/font-woff
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/fonts/glyphicons-halflings-regular.woff2
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\fonts\glyphicons-halflings-regular.woff2
+Content Type: 
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\bootstrap\js\bootstrap.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/js/jquery.tap.min.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\js\jquery.tap.min.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/js/menu.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\js\menu.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/js/off-canvas.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\js\off-canvas.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/plugins/system/t3/base-bs3/js/script.js
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\plugins\system\t3\base-bs3\js\script.js
+Content Type: application/javascript
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/system/css/system.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\system\css\system.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/css/rtl/bootstrap.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\css\rtl\bootstrap.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/css/rtl/off-canvas.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\css\rtl\off-canvas.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/css/rtl/template.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\css\rtl\template.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/favicon.ico
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/css/font-awesome.min.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\css\font-awesome.min.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.eot?
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.eot?v=4.5.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.svg?v=4.5.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont.svg
+Content Type: image/svg+xml
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.ttf?v=4.5.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.5.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont.woff2
+Content Type: 
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/fonts/font-awesome/fonts/fontawesome-webfont.woff?v=4.5.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\fonts\font-awesome\fonts\fontawesome-webfont.woff
+Content Type: application/font-woff
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/bg-inner-float.jpg
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\bg-inner-float.jpg
+Content Type: image/jpeg
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/bg-top-bookticket.jpg
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\bg-top-bookticket.jpg
+Content Type: image/jpeg
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/bgGold-kids.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\bgGold-kids.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/bgShadow.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\bgShadow.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/bg_top_menu_shadow.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\bg_top_menu_shadow.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/dubai_gov_logo.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\dubai_gov_logo.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/dubai_muncipality.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\dubai_muncipality.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/gold-cart.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\gold-cart.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/images/gold-conti.png
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\images\gold-conti.png
+Content Type: image/png
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/local/css/themes/spd/bootstrap.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\local\css\themes\spd\bootstrap.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/local/css/themes/spd/off-canvas.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\local\css\themes\spd\off-canvas.css
+Content Type: text/css
+
+Uri: https://ticketingsales.dubaiframe.ae/templates/t3_bs3_blank/local/css/themes/spd/template.css
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\templates\t3_bs3_blank\local\css\themes\spd\template.css
+Content Type: text/css
+
+Uri: https://www.apache.org/licenses/LICENSE-2.0
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\licenses\LICENSE-2.0
+Content Type: text/plain
+
+Uri: https://www.facebook.com/tr?id=2405918026344574&ev=PageView
+&noscript=1
+File Name: C:\Downloaded Web Sites\ticketingsales.dubaiframe.ae\tr
+Content Type: text/plain
+
